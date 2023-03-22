@@ -1,0 +1,41 @@
+<div class="card text-bg-dark mb-5">
+  <!-- vimeo code  -->
+  <div style="padding:56.67% 0 0 0;position:relative;" class="card-img" >
+    <iframe src="https://player.vimeo.com/video/136549604?h=a91c6f1985&autoplay=1&muted=1&loop=1&controls=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <!-- end vimeo code  -->
+  <div class="card-img-overlay d-flex align-items-center">
+    <h1 class="display-1 text-center p-2 d-none d-lg-block">{{beginning.bigTitle}}</h1>
+    <h1 class="display-6 text-center p-2 d-lg-none">{{beginning.bigTitle}}</h1>
+  </div>
+</div>
+
+<div class="row mb-3">
+  <div class="col">
+    <div class="text">
+<!--      <h1>{{beginning.bigTitle}}</h1>-->
+      <h2>{{beginning.title}}</h2>
+      <p>{{beginning.from}}</p>
+      <p>{{beginning.how}}</p>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="background">
+      <img id='idk' [src]="beginning.img1" alt="background picture">
+    </div>
+  </div>
+</div>
+
+<div class="row" >
+  <div class="col">
+    <h3>{{beginning.littleTitle}}</h3>
+    <p>{{beginning.origination}}</p>
+  </div>
+  <div class="col">
+    <h3>{{beginning.littleTitle2}}</h3>
+    <p>{{beginning.vs}}</p>
+  </div>
+</div>
+
+<a routerLink="/history"  class="btn-danger btn mt-2">{{intro.information.title}}</a>

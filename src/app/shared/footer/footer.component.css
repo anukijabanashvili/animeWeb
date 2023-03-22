@@ -1,0 +1,21 @@
+footer {    
+    border-top: 2px solid  #7c777746;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+a {
+    color: black;
+}
+
+@media (max-width: 767px)  {
+    a{
+        padding: 10px;
+        color: black;
+        font-size: 10px;
+    }
+    a img{
+        height: 30px;
+    }
+}
+

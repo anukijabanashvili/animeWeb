@@ -1,0 +1,49 @@
+<section>
+  <h1>{{title|uppercase}}</h1>
+
+  <div class="row g-3">
+    <div class="col-auto">
+      <label for="inputPassword2" class="visually-hidden">searching anime?</label>
+      <input type="text" class="form-control" id="inputPassword2" placeholder="start to type" [(ngModel)]="searchText">
+    </div>
+    <div class="col-auto" >
+      <button type="submit" class="btn btn-primary mb-3 me-2" (click)="searchByName(searchText)">Search</button>
+      <button *ngIf="searchText" type="submit" class="btn btn-secondary mb-3" (click)="searchByName('')">Reset</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div
+      *ngFor="let item of gallery2| Search: searchText"
+      class="col-md-6"
+    >
+
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-lg-4">
+            <img [src]="item.images" [alt]="item.title" class="card-img-top">
+          </div>
+          <div class="col-lg-8">
+            <div class="card-body">
+              <div class="text-truncate">
+                <h5 class="d-inline-block">{{item.title}}</h5>
+                <small class="fst-italic">({{item.titleJap}})</small>
+              </div>
+              <div class="">
+                <small>
+                  <span class="text-muted d-inline-block mb-1">{{item.synopsis}}</span><br>
+                  Producer: {{item.producers}} <br>
+                  Status: {{item.status}} <br>
+                  Ganre: {{item.ganres}} <br>
+                </small>
+              </div>
+              <a target="_blank" [href]="item.trailer" class="btn-danger btn mt-2">watch on youtube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
